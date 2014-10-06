@@ -1,0 +1,22 @@
+extends base
+
+prepend window_title
+  
+  = page.title
+  = "&mdash;"
+
+append content
+
+  include _partial/article_pagination
+
+  article(class=page.layout)
+    a(href=page.permalink)
+      h2= page.title
+    div.meta
+      include _partial/article_meta
+      +date(page.date)
+      +category(page.categories)
+    
+    != page.content
+
+  include _partial/article_pagination

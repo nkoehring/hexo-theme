@@ -1,0 +1,27 @@
+extends base
+
+block content
+  menu.tags-list
+    - totalPosts = site.categories.reduce(function(u,v){return u+v.length}, 0)
+    - site.categories.each(function(category){
+
+      li( style="font-size:" + (1+5*category.length/totalPosts) + "rem" )
+        a(href=url_for(category.path))= category.name
+
+    - })
+
+  ul.article-list
+    - page.posts.each(function(article){
+
+      li
+        a(href=url_for(article.path))
+          article
+            time.meta( datetime=article.date.format() )
+              include _partial/article_meta
+              +date(article.date)
+              //+category(article.categories)
+            h2= article.title
+
+    - })
+
+  include _partial/article_list_pagination
