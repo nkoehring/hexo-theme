@@ -1,0 +1,26 @@
+#content article.post
+    padding 2rem 5rem
+    background #323a40
+    border .5rem dotted rgba(255,255,255,.1)
+    color #fafafa
+
+    h2
+        font-size 3.6rem
+
+#content nav.article-pagination
+    display block
+    height 1.5em
+
+    a.prev
+        float left
+        &::before
+            content "←"
+        &:hover::before
+            content attr(title)" – "
+
+    a.next
+        float right
+        &::after
+            content "→"
+        &:hover::after
+            content " – "attr(title)

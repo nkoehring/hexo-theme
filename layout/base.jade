@@ -1,10 +1,8 @@
 doctype html
-block vars
-  - var bodyclass = null;
 html(lang='en')
   head
     include _partial/head
-  body(class=bodyclass)
+  body
     a(href=config.root)
       header#page-header
         block header
