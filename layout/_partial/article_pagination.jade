@@ -1,7 +1,6 @@
-nav.article-pagination
-  if page.prev
-    a(href=url_for(page.prev.path), title=page.prev.title, class='prev')
-      = __("prev") + " " + __("article")
-  if page.next
-    a(href=url_for(page.next.path), title=page.next.title, class='next')
-      = __("next") + " " + __("article")
+if page.prev
+  a(href=url_for(page.prev.path), title=__("prev_article"), class='prev')
+    = "« " + page.prev.title
+if page.next
+  a(href=url_for(page.next.path), title=__("next_article"), class='next')
+    = page.next.title + " »"

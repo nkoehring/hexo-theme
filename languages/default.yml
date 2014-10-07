@@ -11,3 +11,5 @@ archive_b: "Archives: %s"
 page: page %d
 recent_posts: recent posts
 article: article
+prev_article: previous article
+next_article: next article

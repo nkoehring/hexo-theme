@@ -7,7 +7,8 @@ prepend window_title
 
 append content
 
-  include _partial/article_pagination
+  nav.article-pagination.top
+    include _partial/article_pagination
 
   article(class=page.layout)
     a(href=page.permalink)
@@ -19,4 +20,5 @@ append content
     
     != page.content
 
-  include _partial/article_pagination
+  nav.article-pagination.bottom
+    include _partial/article_pagination

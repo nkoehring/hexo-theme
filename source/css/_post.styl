@@ -10,17 +10,12 @@
 #content nav.article-pagination
     display block
     height 1.5em
+    &.top
+        margin-top: 1.5rem
 
     a.prev
         float left
-        &::before
-            content "←"
-        &:hover::before
-            content attr(title)" – "
 
     a.next
         float right
-        &::after
-            content "→"
-        &:hover::after
-            content " – "attr(title)
+        text-align right
