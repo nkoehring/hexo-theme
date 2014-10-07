@@ -13,8 +13,10 @@ title
     = config.title
 //- link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
 
-link(href=config.root + 'favicon.png', rel='icon')
+link(href=url_for('img/favicon.png'), rel='icon')
 
-link(rel='alternate', href=theme.rss ? theme.rss : config.root + 'atom.xml', title=config.title, type='application/atom.xml')
+link(rel='alternate', href=theme.rss ? theme.rss : url_for('atom.xml'), title=config.title, type='application/atom.xml')
 
-link(rel='stylesheet', href=config.root + 'css/app.css')
+link(rel='stylesheet', href=url_for('css/app.css'))
+
+script(src=url_for('js/app.js'))

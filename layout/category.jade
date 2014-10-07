@@ -15,7 +15,7 @@ block content
       li
         article
           h3
-            a(href=config.root + article.path)= article.title
+            a(href=url_for(article.path))= article.title
           div.meta
             include _partial/article_meta
 

@@ -6,7 +6,7 @@ mixin category(categories)
   if categories.length > 0
     |  in 
     - categories.each(function(category){
-      a(href=config.root + category.path)
+      a(href=url_for(category.path))
         = category.name
       | &ensp;
     - })
