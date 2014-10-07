@@ -3,13 +3,8 @@ html(lang='en')
   head
     include _partial/head
   body
-    a(href=config.root)
-      header#page-header
-        block header
-          h1#site-title= config.title
-          p#site-slogan= config.subtitle
-          nav#site-nav
-            include _partial/main-menu
+    header#page-header
+      include _partial/header
           
     section#content
       block content        

@@ -3,19 +3,26 @@ header#page-header
     border-bottom thin solid #333
     height 12rem
 
-    h1
-        margin 0
-        opacity 0
-        height 2rem
-        margin-bottom -4rem
+h1#site-title, p#site-slogan
+    position absolute
+    opacity 0
+    top 0
+    left 0
 
 nav#site-nav
-    display block
+    display inline-block
     text-align right
+    width 10rem
     height 100%
+    vertical-align top
     menu
         margin 0
         padding 1rem
         li
             display block
             line-height 1.2em
+
+a#root-anchor
+    display inline-block
+    width 96rem - 10rem
+    height 100%
