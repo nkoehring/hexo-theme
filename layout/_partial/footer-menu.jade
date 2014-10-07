@@ -1,0 +1,9 @@
+menu
+  li.go-to-top
+      a(href="#") &#128285;
+
+  - Object.keys(theme.menu).forEach(function(entry){
+    li
+      a(href=theme.menu[entry])= entry
+  - })
+
