@@ -18,7 +18,7 @@ block content
           article
             time.meta( datetime=article.date.format() )
               include _partial/article_meta
-              +date(article.date)
+              +dateFromNow(article.date)
               //+category(article.categories)
             h2= article.title
 

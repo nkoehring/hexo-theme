@@ -1,12 +1,14 @@
 mixin date(date)
+  = date.format(config.date_format)
+
+mixin dateFromNow(date)
   = date.fromNow()
 
-mixin category(categories)
-
-  if categories.length > 0
-    |  in 
-    - categories.each(function(category){
-      a(href=url_for(category.path))
-        = category.name
-      | &ensp;
-    - })
+mixin listing(elements)
+  - elements.each(function(el,i){
+    li
+      a(href=url_for(el.path))
+        = el.name
+      if(i < elements.length - 1)
+        |, 
+  - })

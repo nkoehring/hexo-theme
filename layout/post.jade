@@ -13,17 +13,33 @@ append content
   article(class=page.layout)
     a(href=page.permalink)
       h2= page.title
+
+    if moment() - page.date > 1000*60*60*24*365
+      .disclaimer
+        h4= __("old_article_disclaimer_header")
+        p= __("old_article_disclaimer")
+
     div.meta
       include _partial/article_meta
-      +date(page.date)
-      +category(page.categories)
-    
-    .content-column
-      if moment() - page.date > 1000*60*60*24*365
-        .disclaimer
-          h4= __("old_article_disclaimer_header")
-          p= __("old_article_disclaimer")
 
+      .date(title=__("article.meta.date"))
+        +date(page.date)
+
+      .author(title=__("article.meta.author"))
+        if page.author
+          a(href=page.author.url target="_blank")= page.author
+        else
+          a(href="https://koehr.in" target="_blank") koehr
+
+      if page.categories.length > 0
+        ul.categories(title=__("article.meta.categories"))
+          +listing(page.categories)
+
+      if page.tags.length > 0
+        ul.tags(title=__("article.meta.tags"))
+          +listing(page.tags)
+
+    .content-column
       != page.content
 
   nav.article-pagination.bottom
