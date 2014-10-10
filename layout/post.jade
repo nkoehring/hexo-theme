@@ -18,7 +18,13 @@ append content
       +date(page.date)
       +category(page.categories)
     
-    != page.content
+    .content-column
+      if moment() - page.date > 1000*60*60*24*365
+        .disclaimer
+          h4= __("old_article_disclaimer_header")
+          p= __("old_article_disclaimer")
+
+      != page.content
 
   nav.article-pagination.bottom
     include _partial/article_pagination

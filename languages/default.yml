@@ -13,3 +13,5 @@ recent_posts: recent posts
 article: article
 prev_article: previous article
 next_article: next article
+old_article_disclaimer_header: This article quite old.
+old_article_disclaimer: Content may be outdated and/or links may be broken.
