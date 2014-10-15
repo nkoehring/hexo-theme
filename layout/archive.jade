@@ -2,24 +2,21 @@ extends base
 
 prepend window_title
   = __("archive") + ' // '
-  
-  | Archive&mdash;
 
 block content
-  header
+  header.archive
     h2 Archive
 
   ul.article-list
     - page.posts.each(function(article){
 
       li
-        article
-          h3
-            a(href=url_for(article.path))= article.title
-          div.meta
-            include _partial/article_meta
-
-            +date(article.date)
-            +listing(article.categories)
+        a(href=url_for(article.path))
+          article
+            time.meta( datetime=article.date.format() )
+              include _partial/article_meta
+              +dateFromNow(article.date)
+              //+category(article.categories)
+            h2= article.title
 
     - })
