@@ -4,6 +4,6 @@ menu
 
   - Object.keys(theme.menu).forEach(function(entry){
     li
-      a(href=theme.menu[entry])= entry
+      a(href=url_for(theme.menu[entry]))= entry
   - })
 
