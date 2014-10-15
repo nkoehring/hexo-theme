@@ -2,13 +2,8 @@ extends base
 
 block content
   menu.tags-list
-    - totalPosts = site.categories.reduce(function(u,v){return u+v.length}, 0)
-    - site.categories.each(function(category){
-
-      li( style="font-size:" + (1+5*category.length/totalPosts) + "rem" )
-        a(href=url_for(category.path))= category.name
-
-    - })
+    include _partial/tag-cloud
+    +tagCloud(site.categories)
 
   ul.article-list
     - page.posts.each(function(article){

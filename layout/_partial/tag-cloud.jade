@@ -1,0 +1,9 @@
+mixin tagCloud(items)
+  - total = items.reduce(function(u,v){return u+v.length}, 0)
+  - items.each(function(item){
+
+    li( style="font-size:" + (1+20*item.length/total) + "rem" )
+      a(href=url_for(item.path))= item.name
+  - })
+
+
