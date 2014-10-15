@@ -16,12 +16,18 @@ old_article_disclaimer: Content may be outdated and/or links may be broken.
 category:
   header: filtered for “%s”
   amount:
-    one: "One post in this category."
-    zero: "No posts in this category."
-    other: "%d posts in this category."
+    one: "One article in this category."
+    zero: "No articles in this category."
+    other: "%d articles in this category."
+tag:
+  header:
+    one: "%d article tagged with “%s”."
+    zero: "%d articles tagged with “%s”. How did you get here?"
+    other: "%d articles tagged with “%s”."
 article:
   meta:
     date: created
     author: by
     categories: in
     tags: tagged as
+
