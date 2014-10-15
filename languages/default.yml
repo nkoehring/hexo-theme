@@ -6,15 +6,19 @@ tweets: tweets
 prev: previous
 next: next
 comment: comments
-archive_a: archives
-archive_b: "Archives: %s"
+archives: archives
 page: page %d
 recent_posts: recent posts
-article: article
 prev_article: previous article
 next_article: next article
 old_article_disclaimer_header: This article quite old.
 old_article_disclaimer: Content may be outdated and/or links may be broken.
+category:
+  header: filtered for “%s”
+  amount:
+    one: "One post in this category."
+    zero: "No posts in this category."
+    other: "%d posts in this category."
 article:
   meta:
     date: created

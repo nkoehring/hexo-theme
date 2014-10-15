@@ -1,25 +1,23 @@
 extends base
 
 prepend window_title
-  
-  = page.category
-  | &mdash;
+  = page.category + ' // ' + __("categories") + ' // '
 
 block content
-  header
-    h2= page.category
+  header.category
+    h2.title= __("category.header", page.category)
+    p.subtitle= _p("category.amount", page.posts.length)
 
   ul.article-list
     - page.posts.each(function(article){
 
       li
-        article
-          h3
-            a(href=url_for(article.path))= article.title
-          div.meta
-            include _partial/article_meta
-
-            +date(article.date)
-            +listing(article.categories)
+        a(href=url_for(article.path))
+          article
+            time.meta( datetime=article.date.format() )
+              include _partial/article_meta
+              +dateFromNow(article.date)
+              //+category(article.categories)
+            h2= article.title
 
     - })
