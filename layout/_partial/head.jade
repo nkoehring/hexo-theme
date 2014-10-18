@@ -5,8 +5,9 @@ meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scal
 if config.author
   meta(name='author', content=config.author)
 
-block page_description
-  meta(name='description', content=config.description)
+if config.description
+  block page_description
+    meta(name='description', content=config.description)
 
 title
   block window_title
