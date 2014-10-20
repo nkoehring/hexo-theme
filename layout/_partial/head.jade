@@ -18,6 +18,7 @@ link(href=url_for('img/favicon.png'), rel='icon')
 
 link(rel='alternate', href=theme.rss ? theme.rss : url_for('atom.xml'), title=config.title, type='application/atom.xml')
 
-link(rel='stylesheet', href=url_for('css/app.css'))
+link(rel='stylesheet', href=url_for('css/app.css') media="screen")
+link(rel='stylesheet', href=url_for('css/small-screen.css'), media="screen and (max-width:959px)")
 
 script(src=url_for('js/app.js'))
