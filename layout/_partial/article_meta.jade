@@ -1,9 +1,6 @@
 mixin date(date)
   = date.format(config.date_format)
 
-mixin dateFromNow(date)
-  = date.fromNow()
-
 mixin listing(elements)
   - elements.each(function(el,i){
     li
