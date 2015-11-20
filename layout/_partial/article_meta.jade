@@ -4,7 +4,7 @@ mixin date(date)
 mixin listing(elements)
   - elements.each(function(el,i){
     li
-      a(href=url_for(el.path))
+      a(href="/"+(el.path))
         = el.name
       if(i < elements.length - 1)
         |, 

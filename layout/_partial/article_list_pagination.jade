@@ -1,11 +1,11 @@
 nav#article-list-pagination
   if page.prev
-    a(href=url_for(page.prev_link), title=__("prev") + ' articles')
+    a(href="/"+(page.prev_link), title=__("prev") + ' articles')
       | &larr; 
       = __("prev") + ' articles'
   if page.prev && page.next
     | &emsp;
   if page.next
-    a(href=url_for(page.next_link), title=__("next") + ' articles')
+    a(href="/"+(page.next_link), title=__("next") + ' articles')
       = __("next") + ' articles'
       |  &rarr;

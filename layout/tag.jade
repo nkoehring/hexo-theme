@@ -11,7 +11,7 @@ block content
     - page.posts.each(function(article){
 
       li
-        a(href=url_for(article.path))
+        a(href="/"+(article.path))
           article
             time.meta( datetime=article.date.format() )
               include _partial/article_meta

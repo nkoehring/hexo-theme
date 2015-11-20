@@ -1,6 +1,6 @@
 if page.prev
-  a(href=url_for(page.prev.path), title=__("prev_article"), class='prev')
+  a(href="/"+(page.prev.path), title=__("prev_article"), class='prev')
     = "« " + page.prev.title
 if page.next
-  a(href=url_for(page.next.path), title=__("next_article"), class='next')
+  a(href="/"+(page.next.path), title=__("next_article"), class='next')
     = page.next.title + " »"
